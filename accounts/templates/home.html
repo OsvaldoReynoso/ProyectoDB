@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+	<div class="container2">
+		<form class="form-login">
+			<div class="main-section" align="center">
+				<div class="row margen">
+					<div class="col-md-12 text-center user-login-header">
+						<div class="color">
+		    			Hi {{ user.username }}!
+		    			</div>
+		    		</div>
+		    	</div>
+		    </div>
+		</form>
+	</div>
+
+{% else %}
+	<p>You are not logged in</p>
+	<a href="/accounts/login">login</a>
+{% endif %}
+{% endblock %}

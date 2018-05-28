@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Resultados{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+<form action="../resultados/" method="post">{%csrf_token%}
+
+
+<div class="col-md-12 col-sm-12 col-xs-12 col-md-offset-4 col-sm-offset-2 login-image-main ">
+
+
+          <table class="table table-hover" >
+            <thead>
+              <tr>
+                <th scope="col">Area</th>
+                <th scope="col">Puntos</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <div class="color text-center">
+                <h1>Resultados</h1>
+              </div>
+              <div class="container">
+                {% for pre in resultados %}
+                <tr>
+                  <td>{{ pre.area_id__area_nombre }}</td>
+                  <td>{{ pre.total }}</td>
+                </tr>
+              {% endfor %}
+                
+              </div>
+              
+            </tbody>
+
+
+          </table>    
+       <div class="text-center">
+        <a href="{% url 'accounts:interes' %}">
+         <button type="button" class="btn btn-outline-success">Areas</button>
+         </a>
+       </div>
+
+</div>
+
+  <!--  <input type="submit" value="OK">-->
+</form>
+
+
+{% else %}
+  <p>You are not logged in</p>
+  <a href="/accounts/login"></a>
+{% endif %}
+{% endblock %}

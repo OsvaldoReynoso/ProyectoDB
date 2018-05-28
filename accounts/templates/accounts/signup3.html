@@ -1,0 +1,49 @@
+
+{% extends 'base.html' %}
+{% block title %}
+  Registro
+{% endblock %}
+
+{% block content %}
+
+	<form class="login-form" action="" method="post" enctype="multipart/form-data">
+		<div class="main-section" align="center">
+            <div class="row margen">
+            	<div class="col-md-12 text-center user-login-header">
+                	<div class="color">
+                		<h1>Registro</h1>
+                	</div>
+                	<p>Usuario</p>
+                  </div>
+                </div>
+                
+                	  <div class="col-md-12 col-sm-12 col-xs-12 col-md-offset-4 col-sm-offset-2 login-image-main text-center">
+               
+                        <div class="row">
+                  			    <div class="col-md-12 col-sm-12 col-xs-12 user-image-section">
+                          		<img src="../../static/accounts/imagenes/login.png">
+                        		</div>
+                          		<div class="col-md-12 col-sm-12 col-xs-12 user-login-box">
+                        							{% csrf_token %}
+                        							{% for field in form %}
+                          								<p>
+                            								
+                            								{{ field }}
+                            								{% if field.help_text %}
+                              									<small style="color: grey">{{ field.help_text }}</small>
+                            								{% endif %}
+                            								{% for error in field.errors %}
+                              									<p style="color: red">{{ error }}</p>
+                            								{% endfor %}
+                          								</p>
+                        							{% endfor %}
+        						                  <button type="submit" class="btn btn-outline-success">Registrar</button>
+                          		</div>
+                      	</div>
+                    </div>
+               
+            </div>
+        </div>
+    </form>
+
+{% endblock %}

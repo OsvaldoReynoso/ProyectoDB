@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+  
+    
+    
+   
+      <form method="post" class="form-login">
+        {% csrf_token %}
+               <div class="main-section" >
+                <div class="row margen">
+                 
+                  <div class="col-md-12 text-center user-login-header">
+                    <div class="color">
+                      <h1></h1>            
+                    </div>
+                  </div>
+
+                </div>
+                
+                  <div class="col-md-12 col-sm-12 col-xs-12 col-md-offset-4 col-sm-offset-2 login-image-main ">
+                    
+                     
+
+                              <br>
+
+                              <b>Realista:</b>  
+                              <p>A las personas con intereses realistas les agradan las actividades que implican el uso de máquinas o cosas. Se enfocan en la manipulación de máquinas, plantas o animales. Prefieren trabajar en ambientes que demandan competencias técnicas. Perciben el mundo en términos sencillos, tangibles y tradicionales.</p>
+                              <br>
+
+                              <b>Investigativo:</b>
+                              <p>A las personas con intereses de investigación les agradan las actividades que involucran explorar y comprender fenómenos naturales, físicos, químicos o sociales. Se enfocan en analizar información para resolver y entender problemas, así como en escribir sobre nuevos conocimientos. Prefieren trabajar en ambientes que demandan la observación e investigación creativa de fenómenos físicos, químicos, biológicos y sociales. Perciben el mundo en términos abstractos.</p>
+                              <br>
+
+                              <b>Social:</b>
+                              <p>A las personas con intereses sociales les agradan las actividades que implican enseñar, ayudar, aconsejar o servir a otros. Se enfocan en las relaciones interpersonales y en el bienestar de los demás. Prefieren trabajar en ambientes que propician la interacción con otras personas, su cuidado y desarrollo. Perciben el mundo de manera flexible.</p>
+                              <br>
+
+                              <b>Artista:</b>
+                              <p>A las personas con intereses de artista les agradan las actividades que permitan generar ideas y expresarse por diversos medios. Se enfocan en la expresión creativa de sentimientos e ideas. Prefieren trabajar en ambientes que implican demandas y oportunidades que fomentan actividades libres y poco sistematizadas. Perciben el mundo como independiente y poco convencional.</p>
+                              <br>
+
+                              <b>Emprendedor:</b>
+                              <p>A las personas con intereses de emprendedor les agradan las actividades que les permitan persuadir, dirigir y organizar a otros. Se enfocan en identificar objetivos comunes y alcanzarlos junto con otras personas. Prefieren trabajar en ambientes que les exigen persuadir, convencer o guiar a otros. Perciben el mundo en términos de poder, estatus o responsabilidad.</p>
+                              <br>
+
+                              <b>Convencional:</b>
+                              <p>A las personas con intereses convencionales les agradan las actividades con rutinas ordenadas y precisas. Se enfocan en el orden para hacer crecen un comercio o negocio. Prefieren trabajar en ambientes que les demandan orden y manipulación de bases de datos, registros, ingresos, egresos, etc. Perciben el mundo en términos convencionales y sistemáticos.</p>
+                              <br>
+                        
+                        <div class="text-center" >
+                          
+                          <a href="{% url 'orientacion:encuesta' %}">       
+                          <button type="button" class="btn btn-outline-info">Realizar Encuesta</button>
+                          </a>  
+                      </div>
+                     
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+          
+      </form>
+  </div>
+{% endblock %}

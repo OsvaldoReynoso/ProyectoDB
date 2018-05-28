@@ -1,0 +1,133 @@
+.main-section{
+
+    background-size:100% 100%;
+    margin: 0px;
+    width: 100%;
+
+}
+.user-login-header,.login-image-main{
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+.user-login-header h1{
+
+    font-size: 45px;
+    color:#fff;
+}
+.user-login-header p,.last-part p{
+    color:#c9c5c7;
+}
+.user-login-header span{
+    color:#fff;
+    font-weight: 600;
+}
+.login-image-main{
+    padding: 30px;
+    background-color:#fff;
+    border-radius:10px;
+    box-shadow: 0 0 5px 0 #fff;
+
+}
+.user-image-section img{
+    background-color: #B23F26;
+    padding:1px;
+    height:150px;
+    width:150px;
+    border-radius: 50%;
+
+  margin-bottom: 1rem;
+
+}
+.user-login-box,.last-part{
+    padding:20px;
+}
+.user-login-box a,.user-login-box a:hover{
+  text-decoration:none;
+  color: #961B00;
+    width: 100%;
+    font-weight:600;
+}
+.user-login-box a:hover{
+  color: #fff;
+  text-decoration:none;
+    width: 100%;
+    font-weight:600;
+}
+
+
+.color{
+	color: #fff
+	background-color:#fff;	
+
+}
+
+
+
+
+body{
+
+  background-image: url(orientacion/imagenes/loginbg2.jpg);
+  background-size: cover;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 30%;
+  padding-left: 30%;
+}
+
+
+.margen{
+    margin-bottom: -120px;
+
+}
+
+ .container-fluid {
+  margin-top:5rem;
+  background-color: #fff;
+    padding-right: 0px;
+    padding-left: 0px;
+     border-radius:10px;
+  }
+
+.form-group2 {
+  margin-bottom: .5rem;
+
+}
+
+/* ------------------------Botones------------------------ */
+
+.btn-outline-success {
+  width: 40%;
+  color: #B23F26;
+  background-image: none;
+  background-color: transparent;
+  border-color: #B23F26;
+}
+
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #961B00 ;
+  border-color: #B23F26;
+}
+
+.btn-outline-success:focus, .btn-outline-success.focus {
+  -webkit-box-shadow: 0 0 0 0px rgba(92, 184, 92, 0.5);
+          box-shadow: 0 0 0 0px rgba(92, 184, 92, 0.5);
+
+  background-color: #961B00;
+  color: #fff;
+
+
+}
+
+.btn-outline-success.disabled, .btn-outline-success:disabled {
+  color: #fff;
+  background-color: transparent;
+}
+
+.btn-outline-success:active, .btn-outline-success.active,
+.show > .btn-outline-success.dropdown-toggle {
+  
+  background-color: #961B00;
+  border-color: #961B00;
+}

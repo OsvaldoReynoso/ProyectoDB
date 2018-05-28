@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}Encuesta {% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+<form action="../resultados/" method="post">
+{%csrf_token%}
+
+<div class="container-fluid2">
+<div class="col-md-12 col-sm-12 col-xs-12 col-md-offset-4 col-sm-offset-2 login-image-main ">
+
+        <div class="text-center">
+        Elige del 1 al 5 que tanto te gustaria hacer las siguientes actividades
+        </div>
+
+
+          <table class="table table-hover" >
+          	<thead>
+              <tr>
+                <th scope="col">Pregunta</th>
+                <th scope="col">1</th>
+                <th scope="col">2</th>
+                <th scope="col">3</th>
+                <th scope="col">4</th>
+                <th scope="col">5</th> 
+              </tr>
+            </thead>
+            <tbody>
+              
+                <br>
+                <br>
+                <div class="container">
+                {% for pre in preguntas %}
+                <tr>
+                  <td>{{ pre.pregunta_texto}}</td>
+                  <td><input type="radio" name="resp{{ pre.id }}" value="1" "></input> </td>
+                  <td><input type="radio" name="resp{{ pre.id }}" value="2"></input> </td>
+                  <td><input type="radio" name="resp{{ pre.id }}" value="3"></input> </td>
+                  <td><input type="radio" name="resp{{ pre.id }}" value="4"></input> </td>
+                  <td><input type="radio" name="resp{{ pre.id }}" value="5"></input> </td>
+                </tr>
+              {% endfor %}
+              </div>
+                
+            </tbody>
+
+
+          </table>
+
+         
+
+
+<div class="container text-center">
+  
+     <button type="submit" value="OK" class="btn btn-outline-success">Send</button>
+     <br>
+     <br>
+</div>
+</div> 
+</div>  
+   <!-- <input type="submit" value="OK">
+
+      
+
+   -->
+
+</form>
+
+{% else %}
+  <p>You are not logged in</p>
+  <a href="/accounts/login"></a>
+{% endif %}
+{% endblock %}
